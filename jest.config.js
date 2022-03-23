@@ -7,5 +7,6 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy', // return string for the path that was acces
     '\\.css$': require.resolve('./test/style-mock.js'), // anything that ends with css(regex)
   },
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   snapshotSerializers: ['@emotion/jest/serializer'], // serialize css={{}} to regular class'es
 }
