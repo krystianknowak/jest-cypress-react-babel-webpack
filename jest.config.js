@@ -1,5 +1,8 @@
+const path = require('path')
+
 module.exports = {
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jest-environment-jsdom', // add browser objects to testing envirionment
+  moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared'], // because of this, your components are trated like node_modules in tests, doing same thing that webpack config
   moduleNameMapper: {
     '\\.module\\.css$': 'identity-obj-proxy', // return string for the path that was acces
     '\\.css$': require.resolve('./test/style-mock.js'), // anything that ends with css(regex)
