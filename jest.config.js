@@ -14,4 +14,5 @@ module.exports = {
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   snapshotSerializers: ['@emotion/jest/serializer'], // serialize css={{}} to regular class'es
+  collectCoverageFrom: ['**/src/**/*.js'], // include files with this patterns to code coverage report, we want to exclude our tests helper
 }
