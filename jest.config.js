@@ -15,4 +15,18 @@ module.exports = {
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   snapshotSerializers: ['@emotion/jest/serializer'], // serialize css={{}} to regular class'es
   collectCoverageFrom: ['**/src/**/*.js'], // include files with this patterns to code coverage report, we want to exclude our tests helper
+  coverageThreshold: {
+    global: {
+      statements: 31,
+      branches: 18,
+      functions: 29,
+      lines: 29,
+    },
+    './src/shared/utils.js': {
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100,
+    },
+  },
 }
