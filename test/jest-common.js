@@ -12,5 +12,4 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy', // return string for the path that was acces
     '\\.css$': require.resolve('./style-mock.js'), // anything that ends with css(regex)
   },
-  collectCoverageFrom: ['**/src/**/*.js'], // include files with this patterns to code coverage report, we want to exclude our tests helper
 }
