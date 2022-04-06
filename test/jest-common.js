@@ -12,4 +12,9 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy', // return string for the path that was acces
     '\\.css$': require.resolve('./style-mock.js'), // anything that ends with css(regex)
   },
+  watchPlugins: [
+    'jest-watch-select-projects',
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
 }
